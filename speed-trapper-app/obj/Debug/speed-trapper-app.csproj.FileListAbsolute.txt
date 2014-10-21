@@ -25,3 +25,14 @@ E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\bin\System.Web.WebPages
 E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\obj\Debug\speed-trapper-app.csprojResolveAssemblyReference.cache
 E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\obj\Debug\SpeedTrapApp.dll
 E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\obj\Debug\SpeedTrapApp.pdb
+E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\bin\Microsoft.Owin.dll
+E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\bin\Microsoft.Owin.Security.dll
+E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\bin\Owin.dll
+E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\bin\Microsoft.Owin.xml
+E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\visual studio 2012\Projects\SpeedTrapApp\SpeedTrapApp\bin\Microsoft.Owin.Security.xml

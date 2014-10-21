@@ -9,7 +9,7 @@ namespace SpeedTrapApp.Models.Hubs
 {
     public class SpeedTrapperHub: Hub
     {
-        public void sendMessageToClient()
+        public void sendMessageToClient(string name, int speed)
         {
 
         }

@@ -2,7 +2,9 @@
     ViewBag.Title = "Speed Trap";
 }
 
-<b style="color:green">Speed Trap</b> &nbsp; Overspeed: <input type="text" id="speedLimit" />
-<input type="button" value="apply" id="applyLimit"/>
-
+@using (Html.BeginForm("SetMaxSpeedLimit","Home"))
+{
+    <b style="color:green">Speed Trap</b> <span>Overspeed: </span> <input type="text" id="speedLimit" name="txtSpeed" value="@ViewBag.SpeedLimit"/>
+    <input type="submit" value="apply" id="applyLimit" />
+}
 <hr/>

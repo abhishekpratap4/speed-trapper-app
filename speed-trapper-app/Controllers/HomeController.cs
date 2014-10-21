@@ -10,10 +10,18 @@ namespace SpeedTrapApp.Controllers
     {
         //
         // GET: /Home/
-
+        static int speedLimit;
         public ActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult SetMaxSpeedLimit(string txtSpeed)
+        {
+            HomeController.speedLimit = Convert.ToInt16(txtSpeed.ToString());
+            ViewBag.SpeedLimit = speedLimit;
+            return View("Index");
         }
 
     }
