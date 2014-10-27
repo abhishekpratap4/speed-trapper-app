@@ -14,7 +14,6 @@ namespace CarApp.Controllers
         public ActionResult Index()
         {
             Random r1 = new Random();
-            //ViewBag.RandomCar = "BMW";
             ViewBag.RandomSpeed = r1.Next(10, 200);
 
             string[] carNames = System.IO.File.ReadAllLines(@"E:\visual studio 2012\Projects\CarApp\CarApp\Resources\car-names.txt");

@@ -9,9 +9,9 @@ namespace CarApp.Hubs
 {
     public class CarHub: Hub
     {
-        public void sendSpeed(string name, int speed)
+        public void SendSpeed(string name, int speed)
         {
-            Clients.All.sendSpeedToTrapper(name, speed);
+            Clients.Caller.sendSpeedToTrapper(name, speed);
         }
     }
 }

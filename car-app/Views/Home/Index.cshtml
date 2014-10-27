@@ -2,19 +2,37 @@
     ViewBag.Title = "Car App";
 }
 
-My name is <b>@ViewBag.RandomCar</b> 
+My name is <b id="carName">@ViewBag.RandomCar</b> 
 
-<h1 style="color: green">@ViewBag.RandomSpeed km</h1>
-<span>(@ViewBag.Tag)</span>
+<h1 style="color: green" id="carSpeed">@ViewBag.RandomSpeed km</h1>
+<span id="speedTag">(@ViewBag.Tag)</span>
 
 @section scripts{
-    <script src="Scripts/jquery-1.6.4.min.js" type="text/javascript"></script>
-    <script src="Scripts/jquery.signalR-2.1.2.min.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery-1.6.4.min.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery.signalR-2.1.2.min.js" type="text/javascript"></script>
     <script src="/signalr/hubs" type="text/javascript"></script>
+    <script src="http://localhost:19625/signalr/hubs"></script>
     <script type="text/javascript">
         $(function () {
-            var carApp = $.connection.carHub;
+            var _carName = $('#carName')[0].innerText;
+            var _carSpeed = $('#carSpeed')[0].innerText.substring(0, $('#carSpeed')[0].innerText.length - 3);
+            
+            $.connection.hub.url = "http://localhost:19625/signalr";
 
+            var speedTrap = $.connection.speedTrapperHub;
+            speedTrap.client.showBustedMessage = function () {
+                $('#carSpeed')[0].innerText = "You're busted";
+                $('#carSpeed').css('color', 'red');
+                $('#speedTag')[0].innerText = "(over speed " + _carSpeed +"km)";
+            }
+
+            $.connection.hub.start().done(function () {
+                speedTrap.server.sendCarDetails(_carName, _carSpeed).done(function (oPostData) {
+                    //alert("success");
+                });
+            }).fail(function (oPostData) {
+                alert("fail");
+            });
         });
         </script>
     }

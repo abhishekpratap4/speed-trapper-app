@@ -10,9 +10,10 @@ namespace SpeedTrapApp.Controllers
     {
         //
         // GET: /Home/
-        static int speedLimit;
+        public static int speedLimit = 200;
         public ActionResult Index()
         {
+            ViewBag.SpeedLimit = speedLimit;
             return View();
         }
 
